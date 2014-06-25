@@ -1,0 +1,347 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+/*------ COLOR PALLET-----*/
+/*
+#565347  :  GREY(link & Paragraph)
+#81785a  :  LIGHT GREY(border bottom)
+#820000  :  RED(Headings)
+#eae9e6  :  BORDER
+*/
+
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, img, div {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: 'Lato', 'Open Sans', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	color:inherit;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
+.transition{
+	-webkit-transition: .1s;
+	transition: .1s;
+}
+
+.transition1{
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+
+
+/* Shadows */
+.templateAllShadow {
+-moz-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.090);
+-webkit-box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.090);
+box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.090);
+}
+
+/*.allShadow {
+-moz-box-shadow: 0 0 3px black;
+-webkit-box-shadow: 0 0 3px black;
+box-shadow: 0 0 5px grey;
+}*/
+
+.allShadow {
+-moz-box-shadow: 0 0 3px black;
+-webkit-box-shadow: 0 0 3px black;
+box-shadow: 0 0 10px 0px rgba(0, 0, 0, .2);
+}
+
+.rightBottomShadow {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+.innerShadow1{
+   -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+}
+
+.innerShadow2{
+box-shadow: inset 0px 0px 13px 1px #B1B1B1;
+-webkit-box-shadow: inset 0px 0px 13px 1px #B1B1B1;
+-moz-box-shadow: inset 0px 0px 13px 1px #B1B1B1;
+-o-box-shadow: inset 0px 0px 13px 1px #B1B1B1;
+}
+
+.bottomShadow {
+	-webkit-box-shadow: 0 8px 6px -6px grey;
+	   -moz-box-shadow: 0 8px 6px -6px grey;
+	        box-shadow: 0 8px 6px -6px grey;
+}
+
+.textShadow{
+    font:100px Lato Bold;
+    text-transform:uppercase;
+    color:#313543;
+    text-align:center;
+    margin-top:10%;
+    margin-bottom:0px;
+    text-shadow:rgba(0,0,0,0.8) 0px -2px 0px,rgba(255,255,255,0.3) 0px 2px 2px;
+ }
+
+
+
+/* Different Resolution styles */
+
+/*@media only screen and (min-width:641px) and (max-width:1366px) {*/
+
+@media only screen and (min-width:1367px) and (max-width:1440px) {
+}
+
+@media only screen and (max-width:1366px) {
+}
+
+
+/*	Layout Styles	*/
+html, body{
+	background-color: #F5F5F5;
+}
+
+#container{
+	position: relative;
+	width:1200px;
+	margin:0 auto;
+	padding:0px 20px 0px 20px;
+	
+}
+
+
+/* Header Styles */
+header{
+	height: 380px;
+	background-color: #5ABDC4;
+	position: relative;
+	background-image: url(../site_images/login_background.png);
+	background-repeat: repeat-x;
+}
+
+#lineSeperator{
+	border-bottom: 2px solid #3eb1b9;
+}
+
+header h1{
+	width:1200px;
+	margin:0 auto;
+	font-size: 25px;
+	color: #184447;
+	font-weight: 700;
+	word-spacing: 1px;
+	padding-top: 20px;
+	margin-bottom: 20px;
+	position: relative;
+	color: #184447;
+}
+
+header h1 span{
+	font-weight:300;
+	color: white;
+}
+
+header nav{
+	width:1200px;
+	margin:0 auto;
+	text-align:center;
+	margin-top:50px;
+	word-spacing:2px;
+}
+
+#smallTagLine{
+	font-size:30px;
+	margin-bottom:10px;
+	font-weight:300;
+	color:#184447;
+}
+
+#bigTagLine{
+	font-size:60px;
+	margin-bottom:50px;
+	font-weight:400;
+	word-spacing:10px;
+	color:#184447;
+}
+
+#mainButtonsContainer{
+	margin:0 auto;
+	font-size:20px;
+	width:610px;
+	color:white;
+	/*background-color:lightgrey;
+	height:50px;*/
+}
+
+#calculatorButton{
+	float:left;
+	padding:20px 40px;
+	border-radius:10px;
+	border: 1px solid white;
+	
+}
+
+#formButton{
+	float:right;
+	padding:20px 40px;
+	border-radius:10px;
+	border: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#typesOfAnnuity{
+	width:100%;
+	text-align:center;
+	margin-top:100px;
+	margin-bottom:100px;
+	color:#484848;
+}
+
+#typesOfAnnuity h1{
+	font-size:35px;
+	word-spacing:10px;
+	letter-spacing:5px;
+	margin-bottom:30px;
+	/*font-weight:300;*/
+}
+
+#circleTypesContainer{
+	width:950px;
+	margin:0 auto;
+	margin-top:30px;
+	height:180px;
+	margin-bottom:50px;
+}
+
+#circleTypesContainer div{
+	width: 170px;
+	height: 170px;
+	float:left;
+	margin-right:20px;
+	border-radius: 50%;
+	border-top-width: 2px;
+	border-right-width: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 2px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #534D48;
+	border-right-color: #534D48;
+	border-bottom-color: #534D48;
+	border-left-color: #534D48;	
+	
+	font-size:25px;
+	font-weight:300;
+}
+
+body div #fixedType{
+	border-color:#DF6C4F;
+}
+
+body div #variableType{
+	border-color:#ECD06F;
+}
+
+body div #immediateType{
+	border-color:#3C948B;
+}
+
+body div #indexedType{
+	border-color:#1A99AA;
+}
+
+body div #defferedType{
+	border-color:#444444;
+}
+
+#circleTypesContainer div p{
+	padding-top:72px;
+}
+
+#circleTypesContainer div:last-child {
+	margin-right:0px;
+}
+
+
+/* Footer Styles */
+footer{
+}
+
+
+/* Main Buttons Styles */
+#mainButtonsBackgroundContainer{
+}
+
+#mainButtonsContainer{
+}
+
