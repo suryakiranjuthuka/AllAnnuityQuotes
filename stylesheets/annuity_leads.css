@@ -169,7 +169,7 @@ header{
 	background-color:#E85657;
 	position: relative;
 	background-repeat: repeat-x;
-	background:url(../site_images/test2.jpg);
+	background:url(../site_images/test3.jpg);
 	 background-position: 50% 0;
 }
 
@@ -219,7 +219,7 @@ header nav{
 	width:1200px;
 	margin:0 auto;
 	text-align:center;
-	margin-top:50px;
+	margin-top:90px;
 	word-spacing:2px;
 }
 
@@ -240,7 +240,7 @@ header nav{
 }
 
 #mainButtonsContainer{
-	margin:0 auto;
+	margin:60px auto 0 auto;
 	font-size:20px;
 	width:650px;
 	color:white;
