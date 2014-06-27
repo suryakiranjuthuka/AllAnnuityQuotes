@@ -1,11 +1,6 @@
 // JavaScript Document
 
 
-
-
-
-
-
 d3.select("#circleTypesContainer")
 .selectAll("div")
 .on("mouseover", function(){
@@ -24,25 +19,8 @@ d3.select("#circleTypesContainer")
 	.style("transform","scale(1)")
 })
 
-d3.select("#circleTypesContainer")
-.selectAll("div")
-.on("mouseout", function(){
-	d3.select(this)
-	.style("background-color","rgba(0,0,0,0)")
-})
-
-
-
 d3.select("#fixedType")
 .on("click", function(){
-	d3.select("#circleTypesContainer")
-	.selectAll("div")
-	.style("background-color","#F5F5F5")
-	
-	d3.select(this)
-	.style("background-color","#F2635D")
-	.style("color","white")
-	
 	d3.select(".InfoPara")
 	.transition()
 	.duration(400)
@@ -64,36 +42,9 @@ d3.select("#fixedType")
 })
 
 
-d3.select("#variableType")
-.on("mouseover", function(){
-	d3.select(this)
-	.style("background-color","#45B29D")
-	.style("color","white")
-})
-
-/*d3.select("#variableType")
-.on("mouseout", function(){
-	d3.select(this)
-	.style("background-color","rgba(0,0,0,0)")
-	//function(){
-			//if(!window.test){ return "none"; }else{ return "#45B29D";}
-		//})
-	.style("color","white")
-})*/
 
 d3.select("#variableType")
 .on("click", function(){
-	
-	//window.test = false;
-	
-	d3.select("#circleTypesContainer")
-	.selectAll("div")
-	.style("background-color","rgba(0,0,0,0)")
-	
-	d3.select(this)
-	.style("background-color","#45B29D")
-	.style("color","white")
-	
 	d3.select(".InfoPara")
 	.transition()
 	.duration(400)

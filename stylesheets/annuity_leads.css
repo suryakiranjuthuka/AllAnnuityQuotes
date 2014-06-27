@@ -337,6 +337,7 @@ header nav{
 	
 	font-size:25px;
 	font-weight:300;
+	color:#484848;
 	
 	-webkit-transform:scale(1);
     transform:scale(1);
@@ -362,10 +363,10 @@ body div #variableType{
 	border-color:#45B29D;
 }
 
-/*body div #variableType:hover{
+body div #variableType:hover{
 	background-color:#45B29D;
 	color:white;
-}*/
+}
 
 body div #immediateType{
 	border-color:#FFC13D;
@@ -429,7 +430,7 @@ body div #deferredType:hover{
 }
 
 #circleTypesInfoContainerChange{
-	width:1000px;
+	width:950px;
 	margin:0 auto;
 	position:relative;
 }
