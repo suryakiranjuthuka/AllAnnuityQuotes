@@ -15,7 +15,7 @@
 
 
 <a id="TOP"></a>
-
+<div id="transperentLayer">
 <header> <!--class="bottomShadow"-->
 	
     <div id="headerContainer">
@@ -35,6 +35,7 @@
     </div>
 	</nav>
 </header>
+</div>
 
 
 <!--<div id="container">--><!-- ***** START CONTAINER***** -->
