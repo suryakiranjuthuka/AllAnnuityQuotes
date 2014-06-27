@@ -8,7 +8,7 @@
 <title>All Annuity Quotes</title>
 <!--<link rel="shortcut icon" href="../site_images/plum_logo-favicon.ico" >-->
 <link href="stylesheets/annuity_leads.css" rel="stylesheet" type="text/css" media="screen,projection">
-<link rel="stylesheet" type="text/css" href="../stylesheets/component.css" />
+<link href="stylesheets/component.css" rel="stylesheet" type="text/css" media="screen,projection">
 </head>
 
 <body>
@@ -17,21 +17,27 @@
 <a id="TOP"></a>
 
 <header> <!--class="bottomShadow"-->
-	<div id="lineSeperator"><h1 id="title">All <span>Annuity Quotes</span></h1></div>
+	
+    <div id="headerContainer">
+    	<h1 id="title">All <span>Annuity Quotes</span></h1>
+    	<h2>877-897-3194</h2>
+    </div>
+    
+    <div id="lineSeperator"></div>
     
     <nav id="mainButtonsBackgroundContainer">
 
 	<div id="smallTagLine">Don't Outline Your Savings</div>
     <div id="bigTagLine">RELY ON AN ANNUITY</div>
     <div id="mainButtonsContainer">
-            <div id="calculatorButton">Calculate My Payouts</div>
-            <div id="formButton">My Free Quote Request</div>
+            <a href="#annuityCalculatorContainer" class="scroller-link"><div class="transition" id="calculatorButton">Calculate My Payouts</div></a>
+            <a href="#annuityFormContainer" class="scroller-link"><div class="transition" id="formButton">My Free Quote Request</div></a>
     </div>
 	</nav>
 </header>
 
 
-<div id="container"><!-- ***** START CONTAINER***** -->
+<!--<div id="container">--><!-- ***** START CONTAINER***** -->
 
 
 <!--*************************************************************** Start Of Annuity Types ******************************************************-->
@@ -39,20 +45,25 @@
 	<h1>Variety Of Different Annuity Types</h1>
     
     <div id="circleTypesContainer">
-    	<div id="fixedType"><p>FIXED</p></div>
-        <div id="variableType"><p>VARIABLE</p></div>
-        <div id="immediateType"><p>IMMEDIATE</p></div>
-        <div id="indexedType"><p>INDEXED</p></div>
-        <div id="defferedType"><p>DEFFERED</p></div>
+    	<div class="transition1" id="fixedType"><p>FIXED</p></div>
+        <div class="transition1" id="variableType"><p>VARIABLE</p></div>
+        <div class="transition1" id="immediateType"><p>IMMEDIATE</p></div>
+        <div class="transition1" id="indexedType"><p>INDEXED</p></div>
+        <div class="transition1" id="deferredType"><p>DEFERRED</p></div>
+        <aside id="circleTypesInfoContainerTriangle"></aside>
     </div>
     
     <div id="circleTypesInfoContainer">
-    	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div id="circleTypesInfoContainerChange"
+    <p class="InfoPara">
+    	Recieive payments at a fixed rate that does not adjust for inflation. We can gauarantee your full principal plus earnings.
+    </p>
+    </div>
     </div>
     
-    <div id="typesOfAnnuityDescription">
+<!--    <div id="typesOfAnnuityDescription">
     	Each of these annuities are designed and optimized for different financial portfolios, we can help you find which is best for you!
-    </div>
+    </div>-->
       
 </section>
 <!--**************************************************************** END OF Annuity Types ******************************************************-->
@@ -161,11 +172,6 @@
                   <button id="submit" name="submit" type="submit">Submit</button></br>
                 </form>
       	</div>
-        
-        
-     <div id="formEndingText">
-    	Fill out the form below to be contacted by a Financial Advisor from your area.
-    </div>
       
 </section>
 <!--**************************************************************** END OF FORM ******************************************************-->
@@ -178,7 +184,7 @@
 
 
 <!--*************************************************************** Start Calculator ******************************************************-->
-<section id="annuityForm">
+<section id="annuityCalculatorContainer">
 	<h1>Calculate My Payouts</h1>
       
 </section>
@@ -207,38 +213,10 @@
 Respond and learn how life insurance and annuities can be used in various planning strategies for retirement. The insurance professionals are not associated with, or endorsed by any government agency. This information is for educational purposes only. Appointments may be made to discuss the applicability of information to your individual situation. This material has been prepared for informational and educational purposes only. It is not intended to provide, and should not be relied upon for, accounting, legal, tax or investment advice. Please consult with a professional specializing in these areas regarding the applicability of this information to your situation.
 </footer>
 
+<!--</div>--><!-- ***** END OF CONTAINER***** -->
 
-
-
-
-    																<!--Start CLIENT EMAIL MODAL CONTENT -->  
-      
-<!--      <div class="md-modal md-effect-1" id="c_e_modal">
-		<div class="md-content"></br>
-      		<h2>Template</h2>
-				<form action="index.php" enctype="multipart/form-data" method="post">
-                  <p><label>Client Name*</label><input required name="c_e_client_name" type="text" /></p>
-                  <p><label>Sales Rep*</label><select required name="c_e_sales_rep">
-                  <option value=""></option>
-                  </select></p>
-                  <p><label>Send Date*</label><input required name="c_e_send_date" type="text" /></p>
-                  <p><label>Email List*</label><input required name="c_e_email_list" type="text" /></p>
-                  <p><label>Notes</label><textarea name="c_e_notes"  cols="40" rows="4" ></textarea></p>
-                  <input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
-                  <p><label>Attachment</label><input type="file" name="c_e_attachment_url" /><p>
-                  <input type="hidden" id="c_e_website_url" type="text" name="c_e_website_url" value="" />
-                  <input class="md-close" type="hidden" id="c_e_url_path" type="text" name="c_e_url_path" value="" />
-                  <div class="loader" id="loader_c_e"></div>
-                  <button id="c_e_submit" name="c_e_submit" type="submit">Submit</button></br>
-                </form>
-      	</div>
-      </div>--><!--END CLIENT EMAIL MODAL CONTENT --> 
-
-
-</div><!-- ***** END OF CONTAINER***** -->
-
-<script type="text/javascript" src="../javascripts/jquery-2.0.2.min.js"></script>
-<script type="text/javascript" src="../javascripts/d3.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery-2.0.2.min.js"></script>
+<script type="text/javascript" src="javascripts/d3.min.js"></script>
 
 <script type="text/javascript">
 $(function(){
@@ -249,10 +227,8 @@ $(function(){
         $('html,body').animate({scrollTop: $("#"+id).offset().top-$(this).closest('ul').height()},'normal');
     });
 });
-
-
 </script>
 
-<script type="text/javascript" src="../javascripts/annuity_leads.js"></script>
+<script type="text/javascript" src="javascripts/annuity_leads.js"></script>
 </body>
 </html>
