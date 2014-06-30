@@ -9,29 +9,10 @@
 <!--<link rel="shortcut icon" href="../site_images/plum_logo-favicon.ico" >-->
 <link href="stylesheets/annuity_leads.css" rel="stylesheet" type="text/css" media="screen,projection">
 <link href="stylesheets/component.css" rel="stylesheet" type="text/css" media="screen,projection">
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- Return to Top -->
-<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
-
-<div class="bottomFixedNavShadow" id="fixedNav">
-	<div id="centerFixedNav">
-    	<div id="fixedNavBorder1"></div>
-        <div id="fixedNavBorder2"></div>
-    	<h1 id="title">All <span>Annuity Quotes</span></h1>
-        
-        <div id="fNavAllPContainer">
-          <a href="#scrollTypes" class="scroller-link"><p id="fNavp1">Annuity Types</p></a>
-          <a href="#annuityCalculatorContainer" class="scroller-link"><p id="fNavp2">Calculate Payouts</p></a>
-          <a href="#annuityFormContainer" class="scroller-link"><p id="fNavp3">Free Quote</p></a>
-        </div>
-        
-    	<h2>877-897-3194</h2>
-    </div>
-</div>
 
 <a id="TOP"></a>
 
@@ -43,7 +24,7 @@
             <div id="headerBorder2"></div>
             
     		<h1 id="title">All <span>Annuity Quotes</span></h1>
-    		<h2>877-897-3194</h2>
+    		<h2>800-636-1147</h2>
         </div>
     </div>
     
@@ -51,13 +32,14 @@
     
     <nav id="mainButtonsBackgroundContainer">
 
-	<div id="smallTagLine">Don't Outline Your Savings</div>
+	<div id="smallTagLine">Don't Outlive Your Savings</div>
     <div id="bigTagLine">RELY ON AN ANNUITY</div>
     <div id="mainButtonsContainer">
             <a href="#annuityCalculatorContainer" class="scroller-link"><div class="transition bottomShadow" id="calculatorButton">Calculate My Payouts</div></a>
             <a href="#annuityFormContainer" class="scroller-link"><div class="transition bottomShadow" id="formButton">My Free Quote Request</div></a>
     </div>
 	</nav>
+
 </header>	<div id="scrollTypes"></div>
 
 
@@ -69,20 +51,20 @@
 	<h1>What type of Annuity do you want to learn about?</h1>
     
     <div id="circleTypesContainer">
-    <a style="cursor:default" href="#scrollTypes" class="scroller-link">
-    	<div class="transition1" id="fixedType"><p>FIXED</p></div>
-        <div class="transition1" id="variableType"><p>VARIABLE</p></div>
-        <div class="transition1" id="immediateType"><p>IMMEDIATE</p></div>
-        <div class="transition1" id="indexedType"><p>INDEXED</p></div>
-        <div class="transition1" id="deferredType"><p>DEFERRED</p></div>
-        <aside id="circleTypesInfoContainerTriangle"></aside>
-    </a>
+    	<a style="cursor:default" href="#scrollTypes" class="scroller-link">
+	    	<div class="transition1" id="fixedType"><p>FIXED</p></div>
+	        <div class="transition1" id="variableType"><p>VARIABLE</p></div>
+	        <div class="transition1" id="immediateType"><p>IMMEDIATE</p></div>
+	        <div class="transition1" id="indexedType"><p>INDEXED</p></div>
+	        <div class="transition1" id="deferredType"><p>DEFERRED</p></div>
+	        <aside id="circleTypesInfoContainerTriangle"></aside>
+        </a>
     </div>
     
     <div id="circleTypesInfoContainer">
     <div id="circleTypesInfoContainerChange"
-    <p class="InfoPara">
-    	Recieive payments at a fixed rate that does not adjust for inflation. We can gauarantee your full principal plus earnings.
+    <p style="margin-top: 20px;" class="InfoPara">
+    	A fixed annuity features a fixed interest rate, and guarantees you will be returned your principal investment plus additional earnings. Your savings and interest will grow tax-deferred until withdrawal, whenever you are ready to receive income. However, your fixed annuity rate will not adjust for inflation over time.
     </p>
     </div>
     </div>
@@ -107,7 +89,7 @@
 	<h1>My Free Quote Request</h1>
     
     <div id="formInstructions">
-    	Fill out the form below to be contacted by a Financial Advisor from your area.
+    	Fill out the form below to be contacted by a financial advisor from your area.
     </div>
 
 		<div id="form" class="md-content"></br>
@@ -221,7 +203,7 @@
         
         <h2>Enter Values</h2>
         
-        <p><label>Starting Principle ($)</label>
+        <p><label>Starting Principal ($)</label>
         <input id="starting_principle" value="200000" type="text"></p>
         
         <p><label>Length Of Annuity (YEARS)</label>
@@ -230,7 +212,7 @@
         <p><label>Annual Rate Of Growth (%)</label>
         <input id="annual_growth" value="24" type="text"></p>
         
-        <p><label>Withdrawal Frequency:</label>
+        <p><label>Withdrawal Frequency</label>
         <select id="withdraw_rate_dropdown">
   			<option value="12">Monthly</option>
   			<option value="4">Quarterly</option>
@@ -300,49 +282,12 @@ $(function(){
 
 
 
-//$("#header-2").hide(); // hide the fixed navbar initially
-
-var topofDiv = $("header").offset().top; //gets offset of header
-var height = $("header").outerHeight(); //gets height of header
-$(window).scroll(function(){
-    if($(window).scrollTop() > (topofDiv + height - 100)){
-       //$("#header-2").show();
-	   //console.log("hi");
-	   
-	   $("#fixedNav").slideDown("fast");
-    }
-    else if($(window).scrollTop() < (topofDiv + height - 100)){
-       //$("#header-2").show();
-	   //console.log("hi");
-	   
-	   $("#fixedNav").slideUp("fast");
-    }
-});
-
-
 
 $('.calculatorHover').on('mouseover', function(e) {
 	 $('.clickCalculateOnLoad').click();
 	 
 	 $( "#claculatorButton" ).removeClass( 'clickCalculateOnLoad' );
 });
-
-
-//Return to top
-// ===== Scroll to Top ==== 
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-        $('#return-to-top').fadeIn(200);    // Fade in the arrow
-    } else {
-        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
-    }
-});
-$('#return-to-top').click(function() {      // When arrow is clicked
-    $('body,html').animate({
-        scrollTop : 0                       // Scroll to top of body
-    }, 500);
-});
-
 </script>
 
 <script type="text/javascript" src="javascripts/annuity_leads.js"></script>
