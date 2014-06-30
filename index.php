@@ -291,11 +291,6 @@ $('.calculatorHover').on('mouseover', function(e) {
 	 $( "#claculatorButton" ).removeClass( 'clickCalculateOnLoad' );
 });
 
-
-//Return to top
-// ===== Scroll to Top ==== 
-
-
 </script>
 
 <script type="text/javascript" src="javascripts/annuity_leads.js"></script>
