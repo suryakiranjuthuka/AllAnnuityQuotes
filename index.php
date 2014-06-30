@@ -16,6 +16,8 @@
 <!-- Return to Top -->
 <a href="javascript:" id="return-to-top"><div id="topIcon"><img src="site_images/arrowTop.png"></div></a>
 
+
+
 <a id="TOP"></a>
 
 <header class="bottomShadow"> <!--class="bottomShadow"-->
@@ -282,15 +284,27 @@ $(function(){
     });
 });
 
-//Return to top
-// ===== Scroll to Top ==== 
-$(window).scroll(function() {
-    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
-        $('#return-to-top').fadeIn(200);    // Fade in the arrow
-    } else {
-        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+
+//$("#header-2").hide(); // hide the fixed navbar initially
+
+var topofDiv = $("header").offset().top; //gets offset of header
+var height = $("header").outerHeight(); //gets height of header
+$(window).scroll(function(){
+    if($(window).scrollTop() > (topofDiv + height - 100)){
+       //$("#header-2").show();
+	   //console.log("hi");
+	   
+	   $("#return-to-top").slideDown();
+	   //$('#return-to-top').fadeIn();
+    }
+    else if($(window).scrollTop() < (topofDiv + height - 100)){
+       //$("#header-2").show();
+	   //console.log("hi");
+	   //$('#return-to-top').fadeOut();
+	   $("#return-to-top").slideUp();
     }
 });
+
 $('#return-to-top').click(function() {      // When arrow is clicked
     $('body,html').animate({
         scrollTop : 0                       // Scroll to top of body
@@ -298,12 +312,12 @@ $('#return-to-top').click(function() {      // When arrow is clicked
 });
 
 
+
 $('.calculatorHover').on('mouseover', function(e) {
 	 $('.clickCalculateOnLoad').click();
 	 
 	 $( "#claculatorButton" ).removeClass( 'clickCalculateOnLoad' );
 });
-
 </script>
 
 <script type="text/javascript" src="javascripts/annuity_leads.js"></script>
