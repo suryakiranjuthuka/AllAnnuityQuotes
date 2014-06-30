@@ -13,6 +13,8 @@
 
 <body>
 
+<!-- Return to Top -->
+<a href="javascript:" id="return-to-top"><div id="topIcon"><img src="site_images/arrowTop.png"></div></a>
 
 <a id="TOP"></a>
 
@@ -288,6 +290,23 @@ $('.calculatorHover').on('mouseover', function(e) {
 	 
 	 $( "#claculatorButton" ).removeClass( 'clickCalculateOnLoad' );
 });
+
+
+//Return to top
+// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+
 </script>
 
 <script type="text/javascript" src="javascripts/annuity_leads.js"></script>
