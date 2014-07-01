@@ -14,7 +14,7 @@
 <body>
 
 <!-- Return to Top -->
-<a href="javascript:" id="return-to-top"><div id="topIcon"><img src="site_images/arrowTop.png"></div></a>
+<a href="javascript:" id="return-to-top"><div id="topIcon"><img id="bounceArrow" src="site_images/arrowTop.png"></div></a>
 
 
 
@@ -52,7 +52,8 @@
 
 <!--*************************************************************** Start Of Annuity Types ******************************************************-->
 <section id="typesOfAnnuity">
-	<h1>What type of Annuity do you want to learn about?</h1>
+	<div id="clickBelowText"><div>click Below</div></div>
+	<h1>What type of Annuity do <div id="clickMe"><img class="bounce" height="20px;" src="site_images/arrow.png"></div> you want to learn about?</h1>
     
     <div id="circleTypesContainer">
     	<a style="cursor:default" href="#scrollTypes" class="scroller-link">
@@ -318,6 +319,7 @@ $('.calculatorHover').on('mouseover', function(e) {
 	 
 	 $( "#claculatorButton" ).removeClass( 'clickCalculateOnLoad' );
 });
+
 </script>
 
 <script type="text/javascript" src="javascripts/annuity_leads.js"></script>
