@@ -175,6 +175,7 @@ box-shadow: 0 0 10px 0px rgba(0, 0, 0, .2);
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 	z-index:10000000;
+	display:none;
 }
 #return-to-top #topIcon {
 	-webkit-transition: all 0.3s ease;
@@ -192,6 +193,94 @@ box-shadow: 0 0 10px 0px rgba(0, 0, 0, .2);
 #return-to-top:hover #topIcon {
     color: #fff;
     top: 5px;
+}
+
+
+/*-------FIXED SIDEBAR-------*/
+#fixedSidebar{
+	position:fixed;
+	right:0px;
+	/*right:-155px;*/
+	top:30%;
+	z-index:100000000000;
+	color:white;
+	font-size:16px;
+	text-align:left;
+	display:none;
+}
+
+#FS1Container{
+	margin-bottom:15px;
+	position:relative;
+	right:-20px;
+}
+
+#FS1Container:hover, #FS2Container:hover, #FS3Container:hover{
+	right:0px;
+	cursor:pointer;
+}
+
+#FS2Container{
+	margin-bottom:15px;
+	position:relative;
+	right:-20px;
+}
+
+#FS3Container{
+	margin-bottom:15px;
+	position:relative;
+	right:-20px;
+}
+
+.leftTriangle1{
+	width: 0; 
+	height: 0; 
+	border-top: 23px solid transparent;
+	border-bottom: 23px solid transparent;
+	border-right: 23px solid #45B29D;
+	position:absolute;
+	left:-23px;
+}
+
+.leftTriangle2{
+	width: 0; 
+	height: 0; 
+	border-top: 23px solid transparent;
+	border-bottom: 23px solid transparent;
+	border-right: 23px solid #ec7475;
+	position:absolute;
+	left:-23px;
+}
+
+.leftTriangle3{
+	width: 0; 
+	height: 0; 
+	border-top: 23px solid transparent;
+	border-bottom: 23px solid transparent;
+	border-right: 23px solid #6EC96E;
+	position:absolute;
+	left:-23px;
+}
+
+#FS1{
+	padding:15px 0;
+	width:150px;
+	background-color:#45B29D;
+	text-transform:capitalize;
+}
+
+#FS2{
+	width:150px;
+	padding:15px 0;
+	background-color:#ec7475;
+	text-transform:capitalize;
+}
+
+#FS3{
+	width:150px;
+	padding:15px 0;
+	background-color:#6EC96E;
+	text-transform:capitalize;
 }
 
 

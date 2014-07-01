@@ -16,8 +16,28 @@
 <!-- Return to Top -->
 <a href="javascript:" id="return-to-top"><div id="topIcon"><img id="bounceArrow" src="site_images/arrowTop.png"></div></a>
 
-
 <a id="TOP"></a>
+
+<section id="fixedSidebar">
+	<a href="#annuityFormContainer" class="scroller-link">
+    <div class="transition1 bottomShadow" id="FS1Container">
+    	<div class="leftTriangle1"></div>
+    	<div id="FS1">my free quote</div>
+    </div>
+    </a>
+    
+    <a href="#annuityCalculatorContainer" class="scroller-link">
+    <div class="transition1 allShadow bottomShadow" id="FS2Container">
+    	<div class="leftTriangle2"></div>
+    	<div id="FS2">calculate payouts</div>
+    </div>
+    </a>
+    
+    <div class="transition1 bottomShadow" id="FS3Container">
+    	<div class="leftTriangle3"></div>
+    	<div id="FS3">800-636-1147</div>
+    </div>
+</section>
 
 <header class="bottomShadow"> <!--class="bottomShadow"-->
 	
@@ -52,7 +72,7 @@
 <!--*************************************************************** Start Of Annuity Types ******************************************************-->
 <section id="typesOfAnnuity">
 	<h1>What type of Annuity do you want to learn about?</h1>
-    <h2>click on anyone circle below</h2>
+    <h2>click on any one circle below</h2>
     <div style="width:1200px; margin:0 auto;"><img style="margin-left:590px;" height="20" src="site_images/arrow.png"></div>
     
     <div id="circleTypesContainer">
@@ -291,18 +311,25 @@ $(function(){
 var topofDiv = $("header").offset().top; //gets offset of header
 var height = $("header").outerHeight(); //gets height of header
 $(window).scroll(function(){
-    if($(window).scrollTop() > (topofDiv + height - 100)){
+    if($(window).scrollTop() > (topofDiv + height + -1)){
        //$("#header-2").show();
 	   //console.log("hi");
 	   
-	   $("#return-to-top").slideDown();
+	   $("#return-to-top").fadeIn();
+	   $('#fixedSidebar').fadeIn();
+	   
+	   
+	  //$("#fixedSidebar").animate({right:'0px'});
 	   //$('#return-to-top').fadeIn();
     }
-    else if($(window).scrollTop() < (topofDiv + height - 100)){
+    else if($(window).scrollTop() < (topofDiv + height - 1)){
        //$("#header-2").show();
 	   //console.log("hi");
 	   //$('#return-to-top').fadeOut();
-	   $("#return-to-top").slideUp();
+	   
+	   
+	   $("#return-to-top").fadeOut();
+	   $("#fixedSidebar").fadeOut();
     }
 });
 
