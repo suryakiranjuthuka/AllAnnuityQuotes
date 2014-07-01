@@ -17,7 +17,6 @@
 <a href="javascript:" id="return-to-top"><div id="topIcon"><img id="bounceArrow" src="site_images/arrowTop.png"></div></a>
 
 
-
 <a id="TOP"></a>
 
 <header class="bottomShadow"> <!--class="bottomShadow"-->
@@ -52,8 +51,9 @@
 
 <!--*************************************************************** Start Of Annuity Types ******************************************************-->
 <section id="typesOfAnnuity">
-	<div id="clickBelowText"><div>click Below</div></div>
-	<h1>What type of Annuity do <div id="clickMe"><img class="bounce" height="20px;" src="site_images/arrow.png"></div> you want to learn about?</h1>
+	<h1>What type of Annuity do you want to learn about?</h1>
+    <h2>click on anyone circle below</h2>
+    <div style="width:1200px; margin:0 auto;"><img style="margin-left:590px;" height="20" src="site_images/arrow.png"></div>
     
     <div id="circleTypesContainer">
     	<a style="cursor:default" href="#scrollTypes" class="scroller-link">
