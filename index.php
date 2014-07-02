@@ -72,7 +72,7 @@
 <!--*************************************************************** Start Of Annuity Types ******************************************************-->
 <section id="typesOfAnnuity">
 	<h1>What type of Annuity do you want to learn about?</h1>
-    <h2>click on any one circle below</h2>
+    <h2>click on circle below</h2>
     <div style="width:1200px; margin:0 auto;"><img style="margin-left:590px;" height="20" src="site_images/arrow.png"></div>
     
     <div id="circleTypesContainer">
@@ -332,6 +332,7 @@ $(window).scroll(function(){
 	   $("#fixedSidebar").fadeOut();
     }
 });
+
 
 $('#return-to-top').click(function() {      // When arrow is clicked
     $('body,html').animate({
