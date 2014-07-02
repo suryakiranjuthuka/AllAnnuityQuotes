@@ -231,32 +231,50 @@
         <p><label>Starting Principal ($)</label>
         <input id="starting_principle" value="200000" type="text"></p>
         
-        <p><label>Length Of Annuity (YEARS)</label>
-        <input id="length_annuity" value="20" type="text"></p>
+        <p><label>Annual Growth Rate (%)</label>
+        <input id="annual_growth" value="8" type="text"></p>
         
-        <p><label>Annual Rate Of Growth (%)</label>
-        <input id="annual_growth" value="24" type="text"></p>
+        <p><label>Growth Period (YEARS)</label>
+        <input id="growth_period" value="10" type="text"></p>
         
-        <p><label>Withdrawal Frequency</label>
-        <select id="withdraw_rate_dropdown">
-  			<option value="12">Monthly</option>
-  			<option value="4">Quarterly</option>
-  			<option value="2">Semi-Annually</option>
-  			<option value="1">Annually</option>
-		</select> </p>
+        <p><label>Withdrawal Period (YEARS)</label>
+        <input id="withdraw_period" value="20" type="text"></p>
+        
+        <p><label>Annual Growth Rate In Withdrawal Period (%)</label>
+        <input id="withdraw_growth" value="4" type="text"></p>
+        
         <button id="claculatorButton" class="clickCalculateOnLoad" onclick="calc_annuity()">Calculate</button>
         </br></br>
         </div>
     
+    
+    	<h3 id="calDesc">By organizing your inputs correctly, this calculator can be used for many different functions and for any type of annuity!</h3>
+    
+    
+    
+    
+    
     	<div  class="calculatorHover" id="canvas_container">
-    		<canvas  class="calculatorHover" id="canvas" height="450" width="750"></canvas>
-    	</div>
+        		<h2 id="grow">Growth Period</h2>
+                <h2 id="with">Withdrawal Period</h2>
+                <canvas id="canvas1" height="250" width="400"></canvas>
+            	<div id="1_1" style="position:absolute; top:342px; left:150px; font-size:13px; color:#666666;"></div>
+                <div id="1_2" style="position:absolute; top:342px; left:240px; font-size:13px; color:#666666;"></div>
+                <div id="1_3" style="position:absolute; top:342px; left:325px; font-size:13px; color:#666666;"></div>
+            <canvas style="margin-left:10px;" id="canvas2" height="250" width="400"></canvas>
+            	<div id="2_1" style="position:absolute; top:342px; left:560px; font-size:13px; color:#666666;"></div>
+                <div id="2_2" style="position:absolute; top:342px; left:650px; font-size:13px; color:#666666;"></div>
+                <div id="2_3" style="position:absolute; top:342px; left:735px; font-size:13px; color:#666666;"></div>
         
         <div  class="calculatorHover" id="content">
-    
+    	</div>
+    	
+        
+    	<h3 id="growthDesc">Using your inputs, these are the approximate returns that will accumulate during your deferred growth period</h3>
+        <h3 id="withdrawDesc">Using the end value from the growth period, we can estimate the income available over the stated retirement period and the overall return from the initial investment until the end of the withdrawal period</h3>
+        <p id="calculatorDisclaimer">**These calculations are based on the formula for standard annuity payments used to calculate periodic payments on an annuity.</p>
+        
         </div>
-        
-        
         
     </div>
     
@@ -352,9 +370,20 @@ $('.calculatorHover').on('mouseover', function(e) {
 
 <script type="text/javascript" src="javascripts/annuity_leads.js"></script>
 
-    <script type="text/javascript">
-	
-	window.Chart = function(context){
+<script>
+		
+		var scaler;
+        /*!
+ * Chart.js
+ * http://chartjs.org/
+ *
+ * Copyright 2013 Nick Downie
+ * Released under the MIT license
+ * https://github.com/nnnick/Chart.js/blob/master/LICENSE.md
+ */
+
+//Define the global Chart Variable as a class.
+window.Chart = function(context){
 
 	var chart = this;
 	
@@ -629,10 +658,6 @@ $('.calculatorHover').on('mouseover', function(e) {
 	};
 
 	this.Line = function(data,options){
-		
-		var starting_value = document.getElementById('starting_principle').value;
-		
-		var scaler = starting_value/10;
 	
 		chart.Line.defaults = {
 			scaleOverlay : false,
@@ -1772,127 +1797,108 @@ $('.calculatorHover').on('mouseover', function(e) {
 	    return data ? fn( data ) : fn;
 	  };
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		function geomSeries(z,m,n)
-		{
-			var amt;
-			if (z == 1.0) amt = n + 1;
-			else amt = (Math.pow(z,n + 1) - 1)/(z - 1);
-			if (m >= 1) amt -= geomSeries(z,0,m-1);
-			return amt;
-		}
-	
-		function futureValue(p,r,y)
-		{
-			return p*Math.pow(1+r,y);
-		}
-	
-		function annuityPayout(p,r,y)
-		{
-			return futureValue(p,r,y-1)/geomSeries(1+r,0,y-1);
-		}		
-		
+
+
+
+
+
+
+
+
 		function calc_annuity(){
-		
-		//get field values
-		var starting_value = document.getElementById('starting_principle').value;
-		var length_annuity = document.getElementById('length_annuity').value;
-		var annual_growth = document.getElementById('annual_growth').value;
-		var withdraw_rate = document.getElementById('withdraw_rate_dropdown').value;
-		
-		//turn interest rate into decimal point
-		var r = annual_growth/100;
-		var p = starting_value;
-		var y = length_annuity;
-		
-		//annuity formulas
-		var a = annuityPayout(p,r,y);
-		
-		//payout per withdraw
-		a *= (1 + r);
-		
-		function addCommas(nStr)
-		{
-			nStr += '';
-			x = nStr.split('.');
-			x1 = x[0];
-			x2 = x.length > 1 ? '.' + x[1] : '';
-			var rgx = /(\d+)(\d{3})/;
-			while (rgx.test(x1)) {
-				x1 = x1.replace(rgx, '$1' + ',' + '$2');
-			}
-			return x1 + x2;
-		}
-		
-		var payout_round = a/withdraw_rate;
-		
-		var payout1 = Math.round(payout_round);
-		
-		var payout= addCommas(payout1);
-		
-		document.getElementById('content').innerHTML = 'Payout: $'+payout;
+			
+			//get Variables
+			var start_principle = document.getElementById('starting_principle').value;
+			var annual_growth = (document.getElementById('annual_growth').value) * 0.01;
+			var fees = 0;
+			var growth_period = document.getElementById('growth_period').value;
+			var withdraw_period = document.getElementById('withdraw_period').value;
+			var withdraw_growth = (document.getElementById('withdraw_growth').value) * 0.01;
+			
+			//gross with interest
+			var gross = (start_principle * (Math.pow(1+annual_growth,growth_period))-1)-start_principle;
+			
+			//fees
+			var fee = (annual_growth - fees).toFixed(3)*100;
+			
+			//NET
+			var net = start_principle * ((Math.pow((1+annual_growth-fees),growth_period))-1);
+			
+			//Ending Total Before Retirement
+			var ending = Number(start_principle)+Number(net);
+			
+			if(ending < 100000){scaler=10000};
+			if(ending >= 100000){scaler=50000};
+			if(ending >= 500000){scaler=100000};
+			if(ending >= 1000000){scaler=500000};
+			
+			//annual withdraw amount
+			var annual = ending * (withdraw_growth / (1-(Math.pow(1+withdraw_growth, - (withdraw_period)))));
+			
+			//total withdraw
+			var total_withdraw = withdraw_period * annual;
+			
+			//ending value
+			var ending_value = 0;
+			
+			//net return %
+			var net_return = total_withdraw/start_principle-1;
+			
+			//annuity net return
+			var ann_net_return = (Math.pow((net_return+1),(1/parseInt(growth_period )+parseInt(withdraw_period))))-1;
+			
+			//display values
+			document.getElementById('content').innerHTML = "<div id='growthBox'><span class='grey'>Gross Total Gains = </span>$"+Math.round(gross)+"</br><span class='grey'>Annual Net Return = </span>"+annual_growth*100+"%</br><span class='grey'>Total Net Gains = </span>$"+Math.round(net)+"</br><span class='grey'>Ending Value = </span>$"+Math.round(ending)+"</div><div id='withdrawBox'><span class='grey'>Starting Value = </span>$"+Math.round(ending)+"</br><span class='grey'>Estimated Annual Income = </span>$"+Math.round(annual)+"</br><span class='grey'>Total Withdrawals = </span>$"+Math.round(total_withdraw)+"</br><span class='grey'>Final Ending Value = </span>$"+ending_value+"</br><span class='grey'>Total Net Return = </span>"+Math.round(net_return*100)+"%</br><span class='grey'>Annual Net Return = </span>"+annual_growth*100+"%</div>";
 		
 
-		var lineChartData = {
-			labels : ['',y+' years'],
+		var lineChartData1 = {
+			labels : [0,growth_period],
+			datasets : [
+				{	
+					fillColor : "rgba(151,187,205,0.5)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					data : [start_principle,Math.round(ending)]
+				}
+			]
+			
+		}
+	
+	document.getElementById('1_1').innerHTML = Math.round(growth_period/4);	
+	document.getElementById('1_2').innerHTML = Math.round(growth_period/2);
+	document.getElementById('1_3').innerHTML = Math.round(growth_period*.75);
+		
+	var myLine1 = new Chart(document.getElementById("canvas1").getContext("2d")).Line(lineChartData1);
+	
+	var lineChartData2 = {
+			labels : [growth_period,Number(withdraw_period)+Number(growth_period)],
 			datasets : [
 				{
 					fillColor : "rgba(151,187,205,0.5)",
 					strokeColor : "rgba(151,187,205,1)",
 					pointColor : "rgba(151,187,205,1)",
 					pointStrokeColor : "#fff",
-					data : [p,0]
+					data : [Math.round(ending),0]
 				}
 			]
 			
 		}
-
-	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+		
+		var scale_of_x = Number(withdraw_period)/4;
+		
+		document.getElementById('2_1').innerHTML = Math.round(Number(growth_period)+Number(scale_of_x));	
+		document.getElementById('2_2').innerHTML = Math.round(Number(growth_period)+Number(scale_of_x*2));
+		document.getElementById('2_3').innerHTML = Math.round(Number(growth_period)+Number(scale_of_x*3));
+	
+	var myLine2 = new Chart(document.getElementById("canvas2").getContext("2d")).Line(lineChartData2);	
 	
 	}
+
+
+
+        </script>
 	
-	</script>
 
 </body>
 </html>

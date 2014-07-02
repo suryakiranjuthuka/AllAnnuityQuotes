@@ -698,23 +698,47 @@ body div #deferredType:hover{
 	margin-bottom:20px;
 }
 
-
-
 #centerCalculatorContainer{
 	background-color:#FEF0E3;
 	width:1200px;
 	margin:50px auto;
-	height:611px;
+	height:753px;
+	position:relative;
 }
 
 #calculatorForm{
 	float:left;
 }
 
+#calDesc{
+	width:230px;
+	position:absolute;
+	bottom:0px;
+	word-spacing:2px;
+	font-size:16px;
+	text-align:center;
+	padding:50px;
+	color:#E85657;
+	font-weight:300;
+}
+
 #canvas_container{
 	background-color:white;
 	float:right;
-	padding:80px 50px;
+	padding:60px 0px 60px 20px;
+	position:relative;
+	width:850px;
+}
+
+#canvas_container h2{
+	font-weight: 300;
+	font-size: 25px;
+	font-weight:300;
+	font-family:inherit;
+	color:#E85657;
+	display:inline-block;
+	margin-bottom:20px;
+	width:250px;
 }
 
 #content{
@@ -722,12 +746,88 @@ body div #deferredType:hover{
 	font-family:'Lato', 'Open Sans';
 	color:#E85657;
 	position:relative;
-	left:700px;
-	top:90px;
-	width:300px;
-	font-weight:300;
-	letter-spacing:2px;
-	word-spacing:10px;
+	height:150px;
+	top:20px;
+	border-top:1px solid #E85657;
+	padding-top:20px;
+	left:-20px;
+	width:870px;
+}
+
+#grow{
+	margin-left:140px;
+}
+
+#with{
+	margin-left:150px;
+}
+
+.grey{
+	color:grey;
+}
+
+#growthBox{
+	font-size:16px;
+	float:left;
+	height:100px;
+	line-height:1.4;
+	letter-spacing:0px;
+	word-spacing:2px;
+	text-align:left;
+	margin-left:20px;
+	position:relative;
+	left:100px;
+	top:20px;
+}
+
+#withdrawBox{
+	font-size:16px;
+	float:right;
+	line-height:1.4;
+	letter-spacing:0px;
+	word-spacing:2px;
+	text-align:left;
+	position:relative;
+	right:80px;
+}
+
+#growthDesc{
+	width:330px;
+	padding:20px 20px 20px 20px;
+	display:inline-block;
+	border-top:3px solid #E85657;
+	color:grey;
+	word-spacing:2px;
+	line-height:1.2;
+	position:relative;
+	top:5px;
+	left:5px;
+	background-color:#e4e4e4;
+	text-align:center;
+}
+
+#withdrawDesc{
+	width:315px;
+	padding:20px 28px 25px 28px;
+	display:inline-block;
+	border-top:3px solid #E85657;
+	word-spacing:2px;
+	line-height:1.2;
+	color:grey;
+	position:relative;
+	top:20px;
+	left:80px;
+	background-color:#e4e4e4;
+	text-align:center;
+}
+
+#calculatorDisclaimer{
+	font-size:12px;
+	position:relative;
+	top:40px;
+	text-align:center;
+	color:grey;
+	margin-bottom:10px;
 }
 
 
