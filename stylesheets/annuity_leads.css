@@ -154,6 +154,53 @@ box-shadow: 0 0 10px 0px rgba(0, 0, 0, .2);
     margin-bottom:0px;
     text-shadow:rgba(0,0,0,0.8) 0px -2px 0px,rgba(255,255,255,0.3) 0px 2px 2px;
  }
+ 
+/* --------------------- PRE LOADER STYLES ---------------------- */
+#loader_form{
+	margin-top:30px;
+	margin-left:180px;
+	position:absolute;
+	display:none;
+}
+
+.loader {
+  margin: 6em auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: .3em solid rgba(232,87,88, 0.3);
+  border-right: .3em solid rgba(232,87,88, 0.3);
+  border-bottom: .3em solid rgba(232,87,88, 0.3);
+  border-left: .3em solid #E85758;
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 
 
 /* Return To Top */
@@ -702,7 +749,7 @@ body div #deferredType:hover{
 	background-color:#FEF0E3;
 	width:1200px;
 	margin:50px auto;
-	height:753px;
+	height:773px;
 	position:relative;
 }
 
@@ -713,13 +760,45 @@ body div #deferredType:hover{
 #calDesc{
 	width:230px;
 	position:absolute;
-	bottom:0px;
+	bottom:10px;
 	word-spacing:2px;
 	font-size:16px;
 	text-align:center;
 	padding:50px;
 	color:#E85657;
 	font-weight:300;
+}
+
+#canvas1dollar, #canvas2dollar{
+	position:absolute;
+	font-size:14px;
+	color:#E85657;
+}
+
+#canvas1dollar{
+	top:83px;
+	left:48px;
+}
+
+#canvas2dollar{
+	top:83px;
+	left:460px;
+}
+
+#canvas1Years, #canvas2Years{
+	position:absolute;
+	font-size:12px;
+	color:#E85657;
+}
+
+#canvas1Years{
+	top:365px;
+	left:224px;
+}
+
+#canvas2Years{
+	top:365px;
+	left:638px;
 }
 
 #canvas_container{
@@ -752,6 +831,7 @@ body div #deferredType:hover{
 	padding-top:20px;
 	left:-20px;
 	width:870px;
+	margin-top:20px;
 }
 
 #grow{

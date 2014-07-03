@@ -119,7 +119,7 @@
 
 		<div id="form" class="md-content"></br>
       		<h2>No-Obligation, Just Rates</h2>
-				<form action="index.php" method="post">
+				<form id="submit_form" method="post" action="index.php">
                   <p><label>First Name*</label><input required name="first_name" type="text" /></p>
                   <p><label>Last Name*</label><input required name="last_name" type="text" /></p>
                   <p><label>Email*</label><input required name="email" type="text" /></p>
@@ -201,7 +201,7 @@
                         <option value="1M+">$1,000,000 or More</option>
                     </select>
                   </p>
-                  <div class="loader" id="loader_c_e"></div>
+                  <div class="loader" id="loader_form"></div><!--LOADER-->
                   <button id="submit" name="submit" type="submit">Submit</button></br>
                 </form>
       	</div>
@@ -229,10 +229,10 @@
         <h2>Enter Values</h2>
         
         <p><label>Starting Principal ($)</label>
-        <input id="starting_principle" value="200000" type="text"></p>
+        <input id="starting_principle" value="$ 200,000" type="text"></p>
         
         <p><label>Annual Growth Rate (%)</label>
-        <input id="annual_growth" value="8" type="text"></p>
+        <input id="annual_growth" value="8%" type="text"></p>
         
         <p><label>Growth Period (YEARS)</label>
         <input id="growth_period" value="10" type="text"></p>
@@ -241,7 +241,7 @@
         <input id="withdraw_period" value="20" type="text"></p>
         
         <p><label>Annual Growth Rate In Withdrawal Period (%)</label>
-        <input id="withdraw_growth" value="4" type="text"></p>
+        <input id="withdraw_growth" value="4%" type="text"></p>
         
         <button id="claculatorButton" class="clickCalculateOnLoad" onclick="calc_annuity()">Calculate</button>
         </br></br>
@@ -255,6 +255,11 @@
     
     
     	<div  class="calculatorHover" id="canvas_container">
+        
+        <div id="canvas1dollar">$</div>
+        <div id="canvas2dollar">$</div>
+        <div id="canvas1Years">YEARS</div>
+        <div id="canvas2Years">YEARS</div>
         		<h2 id="grow">Growth Period</h2>
                 <h2 id="with">Withdrawal Period</h2>
                 <canvas id="canvas1" height="250" width="400"></canvas>
@@ -364,6 +369,12 @@ $('.calculatorHover').on('mouseover', function(e) {
 	 $('.clickCalculateOnLoad').click();
 	 
 	 $( "#claculatorButton" ).removeClass( 'clickCalculateOnLoad' );
+});
+
+$('#submit_form').submit(function(event) {
+	//event.preventDefault();
+	$("#loader_form").show();
+	$("#submit").hide();
 });
 
 </script>
@@ -1808,12 +1819,24 @@ window.Chart = function(context){
 		function calc_annuity(){
 			
 			//get Variables
-			var start_principle = document.getElementById('starting_principle').value;
-			var annual_growth = (document.getElementById('annual_growth').value) * 0.01;
+			var start_principle_original = document.getElementById('starting_principle').value;
+			var start_principle = start_principle_original.replace(/\W|_/gi,'');
+			
+			var annual_growth_original = document.getElementById('annual_growth').value;
+			var annual_growth_cal = annual_growth_original.replace(/\W|_/gi,'');
+			var annual_growth = annual_growth_cal * 0.01;
+			
 			var fees = 0;
-			var growth_period = document.getElementById('growth_period').value;
-			var withdraw_period = document.getElementById('withdraw_period').value;
-			var withdraw_growth = (document.getElementById('withdraw_growth').value) * 0.01;
+			
+			var growth_period_original = document.getElementById('growth_period').value;
+			var growth_period = growth_period_original.replace(/\W|_/gi,'');
+			
+			var withdraw_period_original = document.getElementById('withdraw_period').value;
+			var withdraw_period = withdraw_period_original.replace(/\W|_/gi,'');
+			
+			var withdraw_growth_original = document.getElementById('withdraw_growth').value;
+			var withdraw_growth_cal = withdraw_growth_original.replace(/\W|_/gi,'');
+			var withdraw_growth = withdraw_growth_cal * 0.01;
 			
 			//gross with interest
 			var gross = (start_principle * (Math.pow(1+annual_growth,growth_period))-1)-start_principle;
