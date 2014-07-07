@@ -65,12 +65,13 @@ perspective effects (not including the modals and the overlay).
 
 /* -------------------Content styles EMAILS---------------------- */
 .md-content {
-	color: #e85657;
-	background: #FEF0E3;
+	color: #8054A3;
+	background: #e4f2ff;
 	position: relative;
 	border-radius: 3px;
 	margin: 0 auto;
 	padding-right:0px;
+	border:1px solid #8054A3;
 }
 
 .md-content {
@@ -87,10 +88,11 @@ perspective effects (not including the modals and the overlay).
 	text-align: center;
 	font-weight: 300;
 	font-size: 35px;
-	font-weight:300;
+	font-weight:400;
 	margin-top:15px;
 	margin-bottom:20px;
 	font-family:inherit;
+	color:#3D80BF;
 }
 
 .md-content form {
@@ -111,7 +113,7 @@ perspective effects (not including the modals and the overlay).
 .md-content label {
 	display: block;
 	padding: 10px 0 2px;
-	color: #d5bba4;
+	color: #3d80bf;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: bold;
@@ -123,8 +125,7 @@ perspective effects (not including the modals and the overlay).
 .md-content input[type="password"]{
 	padding: 8px;
 	width: 100%;
-	border: 2px solid #ebd3bd;
-	background: transparent;
+	border: 2px solid #3d80bf;
 	color: #b09a86;
 	font-size: 16px;
 	font-family:inherit;
@@ -134,8 +135,7 @@ perspective effects (not including the modals and the overlay).
 .md-content select{
 	padding: 8px;
 	width: 106%;	
-	border: 2px solid #ebd3bd;
-	background: transparent;
+	border: 2px solid #3d80bf;
 	color: #b09a86;
 	font-size:  16px;
 	font-family:inherit;
@@ -179,8 +179,8 @@ perspective effects (not including the modals and the overlay).
 	height:50px;
 	margin:0px auto 0px;
 	border: none;
-	background: #e75854;
-	color: #f9f6e5;
+	background: white;
+	color: #9D7AB4;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 400;
@@ -193,10 +193,13 @@ perspective effects (not including the modals and the overlay).
 	top:540px;
 	right:20px;
 	bottom:0px;
+	border: 2px solid #EF744C;
 }
 
 .md-content button:hover {
-	background-color:#eb7572;
+	background-color:#F2744C;
+	top:542px;
+	color:white;
 }
 
 /* -------------------Content styles LANDING PAGES----------------- */
@@ -372,7 +375,7 @@ body .md-content1 .secondHalfForm{
 /* -------------------Content styles Calculator---------------------- */
 .md-content2 {
 	color: #e85657;
-	background: #FEF0E3;
+	background: #E4F2FF;
 	position: relative;
 	border-radius: 3px;
 	margin: 0 auto;
@@ -393,10 +396,11 @@ body .md-content1 .secondHalfForm{
 	text-align: center;
 	font-weight: 300;
 	font-size: 35px;
-	font-weight:300;
+	font-weight:400;
 	margin-top:15px;
 	margin-bottom:20px;
 	font-family:inherit;
+	color:#3D80BF;
 }
 
 .md-content2 form {
@@ -417,7 +421,7 @@ body .md-content1 .secondHalfForm{
 .md-content2 label {
 	display: block;
 	padding: 10px 0 2px;
-	color: #d5bba4;
+	color: #3D80BF;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: bold;
@@ -429,8 +433,7 @@ body .md-content1 .secondHalfForm{
 .md-content2 input[type="password"]{
 	padding: 8px;
 	width: 100%;
-	border: 2px solid #ebd3bd;
-	background: transparent;
+	border: 2px solid #3D80BF;
 	color: #b09a86;
 	font-size: 16px;
 	font-family:inherit;
@@ -440,8 +443,7 @@ body .md-content1 .secondHalfForm{
 .md-content2 select{
 	padding: 8px;
 	width: 106%;	
-	border: 2px solid #ebd3bd;
-	background: transparent;
+	border: 2px solid #3D80BF;
 	color: #b09a86;
 	font-size:  16px;
 	font-family:inherit;
@@ -485,8 +487,8 @@ body .md-content1 .secondHalfForm{
 	height:50px;
 	margin:0px auto 0px;
 	border: none;
-	background: #e75854;
-	color: #f9f6e5;
+	background: white;
+	color: #A380BC;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 400;
@@ -499,10 +501,13 @@ body .md-content1 .secondHalfForm{
 	top:505px;
 	right:20px;
 	bottom:0px;
+	border:2px solid #EF744C;
 }
 
 .md-content2 button:hover {
-	background-color:#eb7572;
+	background-color:#F2744C;
+	top:507px;
+	color:white;
 }
 
 

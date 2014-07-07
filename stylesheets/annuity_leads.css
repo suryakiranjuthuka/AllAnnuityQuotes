@@ -284,7 +284,7 @@ box-shadow: 0 0 10px 0px rgba(0, 0, 0, .2);
 	height: 0; 
 	border-top: 23px solid transparent;
 	border-bottom: 23px solid transparent;
-	border-right: 23px solid #45B29D;
+	border-right: 23px solid #85569F;
 	position:absolute;
 	left:-23px;
 }
@@ -294,7 +294,7 @@ box-shadow: 0 0 10px 0px rgba(0, 0, 0, .2);
 	height: 0; 
 	border-top: 23px solid transparent;
 	border-bottom: 23px solid transparent;
-	border-right: 23px solid #ec7475;
+	border-right: 23px solid #2997FF;
 	position:absolute;
 	left:-23px;
 }
@@ -304,7 +304,7 @@ box-shadow: 0 0 10px 0px rgba(0, 0, 0, .2);
 	height: 0; 
 	border-top: 23px solid transparent;
 	border-bottom: 23px solid transparent;
-	border-right: 23px solid #6EC96E;
+	border-right: 23px solid #EF744C;
 	position:absolute;
 	left:-23px;
 }
@@ -312,21 +312,21 @@ box-shadow: 0 0 10px 0px rgba(0, 0, 0, .2);
 #FS1{
 	padding:15px 0;
 	width:150px;
-	background-color:#45B29D;
+	background-color:#85569F;
 	text-transform:capitalize;
 }
 
 #FS2{
 	width:150px;
 	padding:15px 0;
-	background-color:#ec7475;
+	background-color:#2997FF;
 	text-transform:capitalize;
 }
 
 #FS3{
 	width:150px;
 	padding:15px 0;
-	background-color:#6EC96E;
+	background-color:#EF744C;
 	text-transform:capitalize;
 }
 
@@ -344,7 +344,7 @@ box-shadow: 0 0 10px 0px rgba(0, 0, 0, .2);
 
 /*	Layout Styles	*/
 html, body{
-	background-color: #F5F5F5;
+	background-color: white;
 }
 
 #container{
@@ -358,7 +358,7 @@ html, body{
 /* Header Styles */
 header{
 	height: 480px;
-	background-color:#E85657;
+	background-color:#F2744C;
 	position: relative;
 	background-repeat: repeat-x;
 	background:url(../site_images/test3.jpg);
@@ -400,14 +400,14 @@ header{
 	position:absolute;
 	width:175px;
 	height:2px;
-	background-color:#E85657;
+	background-color:#F2744C;
 	left:110px;
 	/*box-shadow: 0 0 7px black;*/
 }
 
 header h1{
 	font-size: 25px;	
-	color:#E85657;
+	color:#F2744C;
 	font-weight: 700;
 	word-spacing: 1px;
 	padding-top: 20px;
@@ -476,7 +476,7 @@ header nav{
 	border-radius:10px;
 /*	border: 2px solid white;
 	background-color:rgba(225,225,225,.1);*/
-	background-color:#E85657;
+	background-color:#F2744C;
 	position:relative;
 	top:0;
 	
@@ -487,13 +487,13 @@ header nav{
 	padding:20px 50px;
 	border-radius:10px;
 	/*border: 2px solid white;*/
-	background-color:#E85657;
+	background-color:#F2744C;
 	position:relative;
 	top:0;
 }
 
 #mainButtonsContainer div:hover{
-	background-color:#e64748;
+	background-color:#f48d6c;
 	cursor:pointer;
 	position:relative;
 	top:3px;
@@ -529,7 +529,7 @@ header nav{
 }
 
 #typesOfAnnuity h2{
-	color:#E85657;
+	color:#F2744C;
 	text-transform:uppercase;
 	word-spacing:2px;
 	font-size:16px;
@@ -581,48 +581,53 @@ header nav{
 }
 
 body div #fixedType{
-	border-color:#F2635D;
+	border-color:#85569f;
 	margin-left:25px;
 }
 
 body div #fixedType:hover{
-	background-color:#F2635D;
+	background-color:#8556A2;
+	border-color:#85569f;
 	color:white;
 }
 
 body div #variableType{
-	border-color:#45B29D;
+	border-color:#85569f;
 }
 
 body div #variableType:hover{
-	background-color:#45B29D;
+	background-color:#8556A2;
+	border-color:#85569f;
 	color:white;
 }
 
 body div #immediateType{
-	border-color:#FFC13D;
+	border-color:#85569f;
 }
 
 body div #immediateType:hover{
-	background-color:#FFC13D;
+	background-color:#8556A2;
+	border-color:#85569f;
 	color:white;
 }
 
 body div #indexedType{
-	border-color:#6EC96E;
+	border-color:#85569f;
 }
 
 body div #indexedType:hover{
-	background-color:#6EC96E;
+	background-color:#8556A2;
+	border-color:#85569f;
 	color:white;
 }
 
 body div #deferredType{
-	border-color:#334D5C;
+	border-color:#85569f;
 }
 
 body div #deferredType:hover{
-	background-color:#334D5C;
+	background-color:#8556A2;
+	border-color:#85569f;
 	color:white;
 }
 
@@ -648,7 +653,7 @@ body div #deferredType:hover{
 	height: 0; 
 	border-right: 20px solid transparent;
 	border-left: 20px solid transparent;
-	border-bottom: 20px solid rgba(51,54,69,1);
+	border-bottom: 20px solid #85569f;
 	position:relative;
 	top:190px;
 	left:90px;
@@ -656,8 +661,9 @@ body div #deferredType:hover{
 
 #circleTypesInfoContainer{
 	padding:60px 0 60px 0;
-	background-color:rgba(51,54,69,1);
+	background-color:#e4f2ff;
 	height:120px;
+	border-top:2px solid #85569F;
 }
 
 #circleTypesInfoContainerChange{
@@ -667,7 +673,7 @@ body div #deferredType:hover{
 }
 
 .InfoPara{
-	color:white;
+	color:#8054A3;
 	line-height:1.4;
 	font-size:20px;
 	font-family:'Open Sans', 'Lato';
@@ -677,10 +683,11 @@ body div #deferredType:hover{
 	left:0px;
 	right:0px;
 	opacity:1;
+	font-weight:400;
 }
 
 #typesOfAnnuityDescription{
-	color:#E85657;
+	color:#F2744C;
 	font-size:25px;
 	width:1000px;
 	margin:0 auto;
@@ -698,12 +705,12 @@ body div #deferredType:hover{
 
 #annuityFormContainer{
 	width:100%;
-	background-color:#E85657;
+	background-color:white;
 	padding:90px 0 100px 0;
 }
 
 #annuityFormContainer h1{
-	color:#FAF1E0;
+	color:#85569F;
 	width:1000px;
 	margin:0 auto;
 	font-size:50px;
@@ -712,7 +719,7 @@ body div #deferredType:hover{
 }
 
 #annuityFormContainer #formInstructions{
-	color:#A63D3E;
+	color:#A380BC;
 	width:1000px;
 	margin:0 auto;
 	font-size:25px;
@@ -737,7 +744,7 @@ body div #deferredType:hover{
 }
 
 #annuityCalculatorContainer h1{
-	color:#E85657;
+	color:#A380BC;
 	width:1000px;
 	margin:0 auto;
 	font-size:50px;
@@ -746,7 +753,7 @@ body div #deferredType:hover{
 }
 
 #centerCalculatorContainer{
-	background-color:#FEF0E3;
+	background-color:#E4F2FF;
 	width:1200px;
 	margin:50px auto;
 	height:773px;
@@ -765,14 +772,14 @@ body div #deferredType:hover{
 	font-size:16px;
 	text-align:center;
 	padding:50px;
-	color:#E85657;
+	color:#A380BC;
 	font-weight:300;
 }
 
 #canvas1dollar, #canvas2dollar{
 	position:absolute;
 	font-size:14px;
-	color:#E85657;
+	color:#A380BC;
 }
 
 #canvas1dollar{
@@ -788,7 +795,7 @@ body div #deferredType:hover{
 #canvas1Years, #canvas2Years{
 	position:absolute;
 	font-size:12px;
-	color:#E85657;
+	color:#A380BC;
 }
 
 #canvas1Years{
@@ -814,7 +821,7 @@ body div #deferredType:hover{
 	font-size: 25px;
 	font-weight:300;
 	font-family:inherit;
-	color:#E85657;
+	color:#A380BC;
 	display:inline-block;
 	margin-bottom:20px;
 	width:250px;
@@ -823,11 +830,11 @@ body div #deferredType:hover{
 #content{
 	font-size:30px;
 	font-family:'Lato', 'Open Sans';
-	color:#E85657;
+	color:#A380BC;
 	position:relative;
 	height:150px;
 	top:20px;
-	border-top:1px solid #E85657;
+	border-top:1px solid #A380BC;
 	padding-top:20px;
 	left:-20px;
 	width:870px;
@@ -875,7 +882,7 @@ body div #deferredType:hover{
 	width:330px;
 	padding:20px 20px 20px 20px;
 	display:inline-block;
-	border-top:3px solid #E85657;
+	border-top:3px solid #A380BC;
 	color:grey;
 	word-spacing:2px;
 	line-height:1.2;
@@ -890,7 +897,7 @@ body div #deferredType:hover{
 	width:315px;
 	padding:20px 28px 25px 28px;
 	display:inline-block;
-	border-top:3px solid #E85657;
+	border-top:3px solid #A380BC;
 	word-spacing:2px;
 	line-height:1.2;
 	color:grey;
